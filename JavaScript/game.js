@@ -11,7 +11,12 @@ $.ajax({
     url: url,
     method: 'GET',
 }).done(function (result) {
-    console.log(result);
+    var results = result.response.docs
+    console.log(results);
+    for(var i = 0; i < 5; i++){
+        $(".panel").append($("<div>" + results[i].headline.main + "</div>"))
+    }
+    
 }).fail(function (err) {
     throw err;
 });
