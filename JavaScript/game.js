@@ -5,7 +5,7 @@ url += '?' + $.param({
     'q': "Iran",
     'begin_date': "20180801",
     'end_date': "20180901"
-    var
+
 });
 $.ajax({
     url: url,
