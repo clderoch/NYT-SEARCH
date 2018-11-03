@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,27 +16,42 @@
 
 <body>
 
-    <script>
-        // Built by LucyBot. www.lucybot.com
-        var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-        url += '?' + $.param({
-            'api-key': "43d849702e6a41b19baf083bc1d4f8e2",
-            'q': "Iran",
-            'begin_date': "20180801",
-            'end_date': "20180901"
-        });
-        $.ajax({
-            url: url,
-            method: 'GET',
-        }).done(function(result) {
-            console.log(result);
-        }).fail(function(err) {
-            throw err;
-        });
-    </script>
+    
+        <div class="container">
+            <h1>Movie Search</h1>
+
+            <!-- This form will be where users input data about the movies -->
+            <form id="movie-form">
+                <label for="movie-input">Search for a movie</label>
+                <input type="text" id="movie-input"><br>
+
+                <!-- This button will trigger our AJAX call -->
+                <input id="find-movie" type="submit" value="Movie Search">
+            </form>
+
+            <!-- We'll be dumping our JSON contents in here -->
+            <div id="movie-view"></div>
+
+            <script>
+                // Built by LucyBot. www.lucybot.com
+                var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+                url += '?' + $.param({
+                    'api-key': "43d849702e6a41b19baf083bc1d4f8e2",
+                    'q': "Iran",
+                    'begin_date': "20180801",
+                    'end_date': "20180901"
+                    var
+                });
+                $.ajax({
+                    url: url,
+                    method: 'GET',
+                }).done(function(result) {
+                    console.log(result);
+                }).fail(function(err) {
+                    throw err;
+                });
+
+            </script>
 </body>
+
 </html>
-
-
-
-
