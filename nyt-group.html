@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!--  JQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <script>
+        // Built by LucyBot. www.lucybot.com
+        var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+        url += '?' + $.param({
+            'api-key': "43d849702e6a41b19baf083bc1d4f8e2",
+            'q': "Iran",
+            'begin_date': "20180801",
+            'end_date': "20180901"
+        });
+        $.ajax({
+            url: url,
+            method: 'GET',
+        }).done(function(result) {
+            console.log(result);
+        }).fail(function(err) {
+            throw err;
+        });
+    </script>
+</body>
+</html>
+
+
+
+
